@@ -4,6 +4,7 @@ import Slides from "./components/Slides";
 const App = () => {
   return (
     <div>
+      //Slides
       <Slides 
         images={[
           {
