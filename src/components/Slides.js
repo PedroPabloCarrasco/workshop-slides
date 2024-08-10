@@ -41,6 +41,11 @@ Slides.defaultProps = {
         {
             src: 'https://www.pexels.com/es-es/foto/naturaleza-cielo-noche-espacio-2387877/',
             title: 'Espacio'
+        },
+
+        {
+            src: 'https://images.pexels.com/photos/4631158/pexels-photo-4631158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            title: 'Espacio y linterna'
         }
     ]
 };
