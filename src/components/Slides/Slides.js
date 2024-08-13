@@ -1,49 +1,63 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
+import propTypes from 'prop-types'
 
-const Slides = ({ images }) => {
-    const [activeIndex, setActiveIndex] = useState(0);
+import './Slides.css'
 
-    useEffect(() => {
-        const tick = setInterval(() => {
-            setActiveIndex(prevIndex => 
-                prevIndex < images.length - 1 ? prevIndex + 1 : 0
-            );
-        }, 1000);
+const Slides = ({ images, interval }) => {
+  const [ activeIndex, setActiveIndex ] = useState(0)
 
-        return () => clearInterval(tick);
-    }, [images.length]);
+  useEffect(
+    () => {
+      const tick = setInterval(() => {
+        if (activeIndex < images.length - 1) {
+          setActiveIndex(activeIndex + 1)
+        } else {
+          setActiveIndex(0)
+        }
+      }, interval)
 
-    return (
-        <div>
-            <h1>{activeIndex}</h1>
-            {/* Renderiza la imagen activa */}
-            <div className="Slide">
-                <img src={images[activeIndex].src} alt={images[activeIndex].title} />
-                <div>{images[activeIndex].title}</div>
-            </div>
+      return () => clearInterval(tick)
+    },
+    [ activeIndex, images.length, interval ]
+  )
+
+  return (
+    <div className='Slide'>
+      <div className='Slide_Container'>
+        {images.map((image, index) => (
+          <img
+            src={image.src}
+            alt={image.title}
+            key={image.src}
+            className={
+              index === activeIndex
+                ? 'Slide_Container_Img animaShow'
+                : 'Slide_Container_Img animaHide'
+            }
+          />
+        ))}
+        <div className='Slide_Container_Title'>
+          { images[activeIndex].title }
         </div>
-    );
-};
+      </div>
+    </div>
+  )
+}
+
 
 Slides.defaultProps = {
-    images: [
-        {
-            src: 'https://images.pexels.com/photos/2387877/pexels-photo-2387877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            title: 'Vía Láctea'
-        },
-        {
-            src: 'https://images.pexels.com/photos/2753432/pexels-photo-2753432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            title: 'Universo'
-        },
-        {
-            src: 'https://images.pexels.com/photos/2387877/pexels-photo-2387877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            title: 'Espacio'
-        },
-        {
-            src: 'https://images.pexels.com/photos/4631158/pexels-photo-4631158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            title: 'Espacio y linterna'
-        }
-    ]
-};
+  interval: 5000,
+  images: []
+}
 
-export default Slides;
+Slides.propTypes = {
+  interval: propTypes.number,
+  images: propTypes.arrayOf(
+    propTypes.shape({
+      src: propTypes.string.isRequired,
+      title: propTypes.string.isRequired
+    })
+  )
+}
+
+export default Slides
