@@ -46,7 +46,7 @@ const Slides = ({ images, interval }) => {
 
 
 Slides.defaultProps = {
-  interval: 5000,
+  interval: 2000,
   images: []
 }
 
