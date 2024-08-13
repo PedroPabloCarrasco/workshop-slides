@@ -5,22 +5,19 @@ const Slides = ({ images }) => {
 
     useEffect(() => {
         const tick = setInterval(() => {
-            if (activeIndex < images.length - 1) {
-                setActiveIndex(prevIndex => prevIndex + 1);
-            } else {
-                // Vuelve al inicio que viene siendo el indice 0
-                setActiveIndex(0);
-            }
+            setActiveIndex(prevIndex => 
+                prevIndex < images.length - 1 ? prevIndex + 1 : 0
+            );
         }, 1000);
 
         return () => clearInterval(tick);
-    }, [activeIndex, images.length]);
+    }, [images.length]);
 
     return (
         <div>
             <h1>{activeIndex}</h1>
             {/* Renderiza la imagen activa */}
-            <div>
+            <div className="Slide">
                 <img src={images[activeIndex].src} alt={images[activeIndex].title} />
                 <div>{images[activeIndex].title}</div>
             </div>
@@ -31,7 +28,7 @@ const Slides = ({ images }) => {
 Slides.defaultProps = {
     images: [
         {
-            src: 'https://www.pexels.com/es-es/foto/naturaleza-cielo-noche-espacio-2387877/',
+            src: 'https://images.pexels.com/photos/2387877/pexels-photo-2387877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
             title: 'Vía Láctea'
         },
         {
@@ -39,10 +36,9 @@ Slides.defaultProps = {
             title: 'Universo'
         },
         {
-            src: 'https://www.pexels.com/es-es/foto/naturaleza-cielo-noche-espacio-2387877/',
+            src: 'https://images.pexels.com/photos/2387877/pexels-photo-2387877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
             title: 'Espacio'
         },
-
         {
             src: 'https://images.pexels.com/photos/4631158/pexels-photo-4631158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
             title: 'Espacio y linterna'

@@ -1,5 +1,7 @@
 import React from "react";
-import Slides from "./components/Slides";
+import Slides from './components/Slides/Slides';
+
+
 
 const App = () => {
   return (
