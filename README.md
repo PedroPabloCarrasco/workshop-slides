@@ -12,7 +12,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto localmente:
 Clona el repositorio:
 bash
 
-git clone https://github.com/tuusuario/react-image-slider.git
+git clone https://github.com/tuPedroPabloCarrasco/workshop-slides.git
 Navega al directorio del proyecto:
 bash
 
