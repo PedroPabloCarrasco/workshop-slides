@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+🎡 React Image Slider
+React Image Slider es un proyecto interactivo y dinámico que demuestra cómo crear un carrusel de imágenes completamente funcional utilizando React y JavaScript. Este slider ofrece una transición fluida entre imágenes, mostrando solo la imagen activa en cada momento, lo que permite una experiencia de usuario moderna y atractiva.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Características
+Automatización de Transiciones: Las imágenes cambian automáticamente cada 3 segundos, proporcionando una navegación sin interrupciones.
+Desarrollo Reactivo: Construido con React, aprovechando el poder del useState y useEffect para manejar el estado y los ciclos de vida del componente de manera eficiente.
+Interfaz Limpia: Diseño minimalista que enfoca la atención del usuario en las imágenes, con un título superpuesto que proporciona contexto visual.
+Personalización Fácil: Puedes añadir fácilmente nuevas imágenes al slider simplemente actualizando la lista de imágenes, lo que hace que sea flexible para diversas necesidades.
+📦 Instalación
+Sigue estos pasos para configurar y ejecutar el proyecto localmente:
 
-## Available Scripts
+Clona el repositorio:
+bash
 
-In the project directory, you can run:
+git clone https://github.com/tuusuario/react-image-slider.git
+Navega al directorio del proyecto:
+bash
 
-### `npm start`
+cd react-image-slider
+Instala las dependencias:
+bash
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm install
+Ejecuta el proyecto:
+bash
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm start
+🔧 Cómo Funciona
+El componente Slides toma una lista de imágenes como propiedad y rota automáticamente entre ellas utilizando un intervalo de tiempo definido. El estado del componente se gestiona con useState, mientras que useEffect asegura que el cambio de imágenes ocurra de manera controlada y sin errores.
 
-### `npm test`
+🛠️ Tecnologías Utilizadas
+React: Biblioteca principal para construir la interfaz de usuario.
+JavaScript (ES6+): Utilizado para la lógica y manipulación del DOM.
+CSS3: Para estilizar el slider y proporcionar una experiencia visual atractiva.
+🌟 Contribuciones
+Las contribuciones son bienvenidas. Si tienes ideas para mejorar el proyecto, no dudes en abrir un issue o un pull request.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📄 Licencia
+Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
